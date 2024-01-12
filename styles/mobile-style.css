@@ -1,16 +1,69 @@
 @charset "UTF-8";
 
-:root {
-    --color1: #d07f2c;
-    --color2: #a25914;
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+:root{    
+    /*Colors*/
+    --background1: #773e09;   
+    --backgroun2: #cf7c29;
+    --menu-color: #7a4816;
     --color3: #d99651;
-    --color4: black;
+
+    /*Fonts*/
+    --font-menu: 'Mukta', sans-serif;
 
 }
 
+/*Reset*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+/*General Settings*/
+.flex {
+    display: flex;
+
+}
+
+body {
+    font-family: var(--font-menu);
+
+}
+
+/*Header*/
+header {
+    background-image: linear-gradient(to bottom, var(--background1), var(--backgroun2));
+    height: 200px;
+
+}
+
+menu.main-menu{
+    
+
+}
+
+ul {
+    background-color: var(--menu-color);
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+div#container-img {
+    justify-self: start;
+    align-self: start;
+    
+}
+
+div#container-img img {
+    height: 200px;
 
 }
