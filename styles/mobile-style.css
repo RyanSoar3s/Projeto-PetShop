@@ -4,9 +4,9 @@
 
 :root{    
     /*Colors*/
-    --background1: #773e09;   
-    --backgroun2: #cf7c29;
-    --menu-color: #7a4816;
+    --background: #c76a0e;
+    --background-options: #6d36038a;   
+    --menu-color: #964f08;
     --color3: #d99651;
 
     /*Fonts*/
@@ -25,7 +25,6 @@
 /*General Settings*/
 .flex {
     display: flex; 
-    gap: 0px 10px
 
 }
 
@@ -36,18 +35,29 @@ body {
 
 /*Header*/
 header {
-    background-image: linear-gradient(to bottom, var(--background1), var(--backgroun2));
-    height: 200px; 
+    background-color: var(--background);
+    height: 150px; 
 
 }
 
+
 button#btn-menu {
+    position: relative;
     background-color: transparent;
-    height: 30px;
+    height: 40px;
+    width: 40px;
     border: none;
+    margin: 10px 20px 0px 10px;
+    padding: 5px 0px 0px 4px;
     cursor: pointer;
-    margin: 10px 0px 0px 10px;
+    z-index: 1;
     
+}
+
+button.active {
+    background-color: var(--background-options) !important;
+    border-radius: 50%;
+
 }
 
 span.menu-bar {
@@ -62,67 +72,65 @@ span.menu-bar {
     
 }
 
-button.active { 
-    height: 100% !important;
-    margin: 0 !important;
-    padding: 10px 0px 0px 10px;
-    
-}
-
-button div {
-    position: relative; 
-    z-index: 1;
-    
-}
-
 button.active span.menu-bar:nth-child(1){
-    transform: translateY(15px) rotate(45deg);
-    position: absolute;
-    top: -103px;
-    
+    transform: translateY(11px) rotate(45deg);
+
 }
 
 button.active span.menu-bar:nth-child(2){
-    transform: translateX(100vw); 
-    position: absolute;
-    top: -82px;
-  
-    
+    transform: translateX(100vw);
+    width: 0;
+
 }
 
 button.active span.menu-bar:nth-child(3){
     transform: translateY(-11px) rotate(-45deg);
-    position: absolute;
-    top: -77px;
-    
+
 }
 
 menu.main-menu{ 
     display: none;
     position: relative;
     background-color: var(--menu-color);
-    height: 100%;
-    left: -20px;
+    height: 210px;
+    width: 130px;
+    left: -91px;
     padding: 10px 40px 10px 60px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.322);
 
 }
 
 ul {
     list-style: none; 
     position: absolute; 
-    top: 45px;
-    left: 15px;
+    top: 61px;
+    left: 34px;
 
 }
 
-a {
+li a {
     text-decoration: none;
     color: white;
+    transition: .3s ease;
+
+}
+
+li:hover a{
+    background-color: var(--background-options);
+    position: relative;
+    transform: scale(1.1);
+    width: 100px;
+    left: -7px;
+    padding-left: 10px;
+    
 
 }
 
 div#container-img { 
     position: relative;
+    margin: 0 auto;
+
     
 }
 
@@ -130,6 +138,6 @@ div#container-img img {
     position: absolute;
     height: 350px;
     width: 120px;
-    top: -65%;
+    top: -73%;
 
 }

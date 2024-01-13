@@ -8,17 +8,14 @@
     <link rel="stylesheet" href="../styles/mobile-style.css" media="all">
 </head>
 <body>
-    <header class="flex">        
+    <header class="flex">      
         <button id="btn-menu" onclick="active()">
-            <div>
-                <span class="menu-bar"></span>
-                <span class="menu-bar"></span>
-                <span class="menu-bar"></span>
-                
-            </div>
-             
-        </button>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
         
+        </button>
+            
         <menu class="main-menu">
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -33,22 +30,22 @@
         
        
         <div id="container-img">
-            <img src="../images/logos/logo-pet_shop.png" alt="logo-pet-shop">
+            <img id="logo" src="../images/logos/pet_shop.png" alt="logo-pet-shop">
         
         </div>
         
         <script>
             function active(){
-                const btn = document.getElementById("btn-menu") 
-                const menu = document.getElementsByClassName("main-menu")[0]
-                const img = document.getElementById("container-img")
-                btn.classList.toggle("active")
-                menu.style.display = (menu.style.display === "" || menu.style.display === "none") ? "block" : "none";
-                
-                img.style.display = (img.style.display === "" || img.style.display === "block") ? "none" : "block";
-                
+                const button = document.getElementById("btn-menu")
+                button.classList.toggle("active")
+
+                const main_menu = document.getElementsByClassName("main-menu")[0]
+                main_menu.style.display = (main_menu.style.display === "" || main_menu.style.display === "none") ? "block" : "none"
+
+
+
             }
-            
+
         </script>
 
     </header>
