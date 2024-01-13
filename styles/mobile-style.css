@@ -24,7 +24,8 @@
 
 /*General Settings*/
 .flex {
-    display: flex;
+    display: flex; 
+    gap: 0px 10px
 
 }
 
@@ -36,17 +37,69 @@ body {
 /*Header*/
 header {
     background-image: linear-gradient(to bottom, var(--background1), var(--backgroun2));
-    height: 200px;
+    height: 200px; 
 
 }
 
-menu.main-menu{
+button#btn-menu {
+    background-color: transparent;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0px 0px 10px;
     
+}
+
+span.menu-bar {
+    display: block;
+    background-color: black;
+    height: 5px;
+    width: 32px;
+    margin-bottom: 6px;
+    border-radius: 2px; 
+    transform-origin: center; 
+    transition: .3s ease;
+    
+}
+
+button.active { 
+   /* display: flex !important;*/
+    background-color: var(--menu-color) !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 10px 0px 0px 10px;
+    
+}
+
+button.active span.menu-bar:nth-child(1){
+    transform: translateY(15px) rotate(45deg);
+    position: relative;
+    top: -83px;
+    
+}
+
+button.active span.menu-bar:nth-child(2){
+    transform: translate(100vw, 100vh); 
+  
+    
+}
+
+button.active span.menu-bar:nth-child(3){
+    transform: translateY(-11px) rotate(-45deg);
+    position: relative;
+    top: -80px;
+    
+}
+
+menu.main-menu{ 
+    display: none;
+    background-color: var(--menu-color);
+    height: 100%;
+    padding: 10px;
 
 }
 
 ul {
-    background-color: var(--menu-color);
     list-style: none;
 
 }
@@ -57,13 +110,15 @@ a {
 
 }
 
-div#container-img {
-    justify-self: start;
-    align-self: start;
+div#container-img { 
+    position: relative;
     
 }
 
 div#container-img img {
-    height: 200px;
+    position: absolute;
+    height: 350px;
+    width: 120px;
+    top: -65%;
 
 }
