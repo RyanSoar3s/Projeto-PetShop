@@ -63,44 +63,55 @@ span.menu-bar {
 }
 
 button.active { 
-   /* display: flex !important;*/
-    background-color: var(--menu-color) !important;
     height: 100% !important;
     margin: 0 !important;
     padding: 10px 0px 0px 10px;
     
 }
 
+button div {
+    position: relative; 
+    z-index: 1;
+    
+}
+
 button.active span.menu-bar:nth-child(1){
     transform: translateY(15px) rotate(45deg);
-    position: relative;
-    top: -83px;
+    position: absolute;
+    top: -103px;
     
 }
 
 button.active span.menu-bar:nth-child(2){
-    transform: translate(100vw, 100vh); 
+    transform: translateX(100vw); 
+    position: absolute;
+    top: -82px;
   
     
 }
 
 button.active span.menu-bar:nth-child(3){
     transform: translateY(-11px) rotate(-45deg);
-    position: relative;
-    top: -80px;
+    position: absolute;
+    top: -77px;
     
 }
 
 menu.main-menu{ 
     display: none;
+    position: relative;
     background-color: var(--menu-color);
     height: 100%;
-    padding: 10px;
+    left: -20px;
+    padding: 10px 40px 10px 60px;
 
 }
 
 ul {
-    list-style: none;
+    list-style: none; 
+    position: absolute; 
+    top: 45px;
+    left: 15px;
 
 }
 
