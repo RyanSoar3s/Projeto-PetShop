@@ -54,7 +54,7 @@ button#btn-menu {
     
 }
 
-button.active {
+button:hover, button.active {
     background-color: var(--background-options) !important;
     border-radius: 50%;
 
@@ -110,6 +110,7 @@ ul {
 }
 
 li a {
+    display: inline-block;
     text-decoration: none;
     color: white;
     transition: .3s ease;
@@ -119,25 +120,20 @@ li a {
 li:hover a{
     background-color: var(--background-options);
     position: relative;
-    transform: scale(1.1);
-    width: 100px;
+    transform: scale(1.01);
+    width: 103px;
     left: -7px;
     padding-left: 10px;
     
 
 }
-
-div#container-img { 
+div#container-img {
     position: relative;
+    align-items: center;
     margin: 0 auto;
-
-    
 }
 
 div#container-img img {
-    position: absolute;
     height: 350px;
     width: 120px;
-    top: -73%;
-
 }
