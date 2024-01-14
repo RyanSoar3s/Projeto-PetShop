@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../styles/mobile-style.css" media="all">
 </head>
 <body>
+    <!--lembrar de adicionar mais meta tags-->
+    
     <header class="flex">      
-        <button id="btn-menu" onclick="active()">
+        <button id="btn-menu" onclick="activeMenu()">
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
@@ -17,25 +19,36 @@
         </button>
             
         <menu class="main-menu">
+            <!--Fazer com que, quando o menu estiver ativo, seja possível sair dele clicando fora do menu-->
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="#">Acessórios</a></li>
                 <li><a href="#">Brinquedos</a></li>
                 <li><a href="#">Camas</a></li>
-                <li><a href="#">Poupas</a></li>
+                <li><a href="#">Roupas</a></li>
 
             </ul>
            
         </menu>
         
        
-        <div id="container-img" class="flex">
-            <img id="logo" src="../images/logos/pet_shop.png" alt="logo-pet-shop">
+        <div class="flex">
+            <img id="logo" src="../images/logos/pet_shop(120x350).png" alt="logo-pet-shop">
+            <input type="text" name="search" id="search" autocomplete="off" placeholder="O que deseja buscar?">
         
         </div>
+
+        <div id="container-search">
+            <div id="lupa">
+                <img src="../images/elements/lupa.png" alt="lupa">
+                <a href="#" class="flex"><input type="submit" value=""></a>
+            </div>
+
+        </div>
+
         
         <script>
-            function active(){
+            function activeMenu(){
                 const button = document.getElementById("btn-menu")
                 button.classList.toggle("active")
 

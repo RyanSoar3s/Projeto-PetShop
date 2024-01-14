@@ -23,8 +23,10 @@
 }
 
 /*General Settings*/
-.flex {
-    display: flex; 
+html, body {
+    height: 100vh;
+    width: 100vw;
+    /* overflow-x: hidden; */
 
 }
 
@@ -33,16 +35,31 @@ body {
 
 }
 
+.flex {
+    display: flex; 
+    justify-content: space-between;
+
+
+}
+
+div.flex {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 0px;
+    flex-grow: 1;
+
+}
+
 /*Header*/
 header {
     background-color: var(--background);
     height: 150px; 
+    width: 100%;
 
 }
 
-
 button#btn-menu {
-    position: relative;
     background-color: transparent;
     height: 40px;
     width: 40px;
@@ -54,7 +71,7 @@ button#btn-menu {
     
 }
 
-button:hover, button.active {
+button:hover, .active {
     background-color: var(--background-options) !important;
     border-radius: 50%;
 
@@ -72,40 +89,36 @@ span.menu-bar {
     
 }
 
-button.active span.menu-bar:nth-child(1){
+.active span.menu-bar:nth-child(1){
     transform: translateY(11px) rotate(45deg);
 
 }
 
-button.active span.menu-bar:nth-child(2){
+.active span.menu-bar:nth-child(2){
     transform: translateX(100vw);
     width: 0;
 
 }
 
-button.active span.menu-bar:nth-child(3){
+.active span.menu-bar:nth-child(3){
     transform: translateY(-11px) rotate(-45deg);
 
 }
 
 menu.main-menu{ 
     display: none;
-    position: relative;
     background-color: var(--menu-color);
     height: 210px;
     width: 130px;
-    left: -91px;
     padding: 10px 40px 10px 60px;
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.322);
 
 }
 
 ul {
     list-style: none; 
-    position: absolute; 
-    top: 61px;
-    left: 34px;
+    position: relative;
 
 }
 
@@ -119,21 +132,55 @@ li a {
 
 li:hover a{
     background-color: var(--background-options);
-    position: relative;
+
     transform: scale(1.01);
     width: 103px;
-    left: -7px;
+
     padding-left: 10px;
     
 
 }
-div#container-img {
-    position: relative;
-    align-items: center;
-    margin: 0 auto;
+
+
+img#logo {
+
+
 }
 
-div#container-img img {
-    height: 350px;
-    width: 120px;
+input[type=text] {
+    display: noe;
+    height: 28px;
+    width: 89%;
+    outline: none;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+div#lupa {
+    position: relative;
+    margin-left: 30px;
+    top: 10px;
+    left: -172%;
+
+
+}
+
+div#lupa img{
+    position: absolute;
+    height: 30px;
+    width: 30px;   
+
+    z-index: 1;
+
+}
+
+input[type=submit] {
+    position: absolute;
+    background-color: var(--background-options);
+    border: 1px solid black;
+    height: 28px;
+    width: 64px;
+    margin-right: 20px;
+    cursor: pointer;
+
 }
