@@ -162,7 +162,7 @@ input[type=text] {
     border: 1px solid black;
     padding-left: 10px;
     margin: 10px 0px;
-    
+
 }
 
 div#lupa img{
@@ -191,7 +191,7 @@ input[type=submit] {
 }
 
 .show-search {
-       display: block !important;
+    display: block !important;
 
 }
 
