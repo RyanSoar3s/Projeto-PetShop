@@ -186,7 +186,6 @@ input[type=submit] {
     left: 23vw;
     margin: 10px 0px;
     cursor: pointer;
-    transition: transform .5s ease;
 
 }
 
