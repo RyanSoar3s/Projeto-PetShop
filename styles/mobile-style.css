@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
-:root{    
+:root {    
     /*Colors*/
     --background: #c76a0e;
     --background-options: #6d36038a;   
@@ -26,7 +26,7 @@
 html, body {
     height: 100vh;
     width: 100vw;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 
 }
 
@@ -37,17 +37,8 @@ body {
 
 .flex {
     display: flex; 
-    justify-content: space-between;
-
-
-}
-
-div#element-col {
-    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 10px 0px;
-    flex-grow: 3;
 
 }
 
@@ -61,8 +52,11 @@ header {
 
 button#btn-menu {
     background-color: transparent;
+    position: absolute;
     height: 40px;
     width: 40px;
+    top: 2px;
+    left: 0vw;
     border: none;
     margin: 10px 20px 0px 10px;
     padding: 5px 0px 0px 4px;
@@ -107,9 +101,12 @@ span.menu-bar {
 
 menu.main-menu{ 
     display: none;
+    position: absolute;
     background-color: var(--menu-color);
     height: 210px;
-    width: 130px;
+    width: 112px;
+    top: 0px;
+    left: 0vw;
     padding: 10px 40px 10px 60px;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.322);
@@ -118,8 +115,9 @@ menu.main-menu{
 
 ul {
     list-style: none; 
-    position: relative;
-
+    position: absolute;
+    top: 60px;
+    left: 15px;
 }
 
 li a {
@@ -132,47 +130,48 @@ li a {
 
 li:hover a{
     background-color: var(--background-options);
-
     transform: scale(1.01);
-    width: 103px;
-
+    width: 97px;
     padding-left: 10px;
-    
 
 }
 
+.logo-margin {
+    margin-top: 30px;
 
-img#logo {
-
-
-}
-
-input[type=text] {
-    display: noe;
-    height: 28px;
-    width: 89%;
-    outline: none;
-    border: 1px solid black;
-    padding-left: 10px;
 }
 
 #container-search {
-    flex-grow: 1;
+    justify-self: flex-end;
 
 }
 
 div#lupa {
-    align-self: flex-start;
+    position: relative;
 
+}
 
+input[type=text] {
+    display: none;
+    position: absolute;
+    height: 28px;
+    width: 56vw;
+    top: -80px;
+    left: -33vw;
+    outline: none;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin: 10px 0px;
+    
 }
 
 div#lupa img{
     position: absolute;
     height: 30px;
-    width: 30px;   
-
-    z-index: 1;
+    width: 30px;  
+    top: -80px; 
+    left: 23vw;
+    margin: 10px 15px;
 
 }
 
@@ -180,9 +179,23 @@ input[type=submit] {
     position: absolute;
     background-color: var(--background-options);
     border: 1px solid black;
+    border-radius: 10px;
     height: 28px;
-    width: 64px;
-    margin-right: 20px;
+    width: 60px;
+    top: -80px;
+    left: 23vw;
+    margin: 10px 0px;
     cursor: pointer;
+    transition: transform .5s ease;
+
+}
+
+.show-search {
+       display: block !important;
+
+}
+
+#submit.show-search {
+    border-radius: 0px 10px 10px 0px;
 
 }

@@ -1,66 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Shop</title>
     <link rel="shortcut icon" href="../images/logos/icon-site.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/mobile-style.css" media="all">
+    <script src="../scripts/events.js" defer></script>
 </head>
+
 <body>
     <!--lembrar de adicionar mais meta tags-->
-    
-    <header class="flex">      
-        <button id="btn-menu" onclick="activeMenu()">
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-            <span class="menu-bar"></span>
-        
-        </button>
-            
-        <menu class="main-menu">
-            <!--Fazer com que, quando o menu estiver ativo, seja possível sair dele clicando fora do menu-->
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#">Acessórios</a></li>
-                <li><a href="#">Brinquedos</a></li>
-                <li><a href="#">Camas</a></li>
-                <li><a href="#">Roupas</a></li>
 
-            </ul>
-           
-        </menu>
+    <header class="flex">
+        <div id="container-menu">
+            <button id="btn-menu">
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+                <span class="menu-bar"></span>
+
+            </button>
+            <!-- Fazer com que, quando o menu estiver ativo, seja possível sair dele clicando fora do menu -->
+            <menu class="main-menu">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Acessórios</a></li>
+                    <li><a href="#">Brinquedos</a></li>
+                    <li><a href="#">Camas</a></li>
+                    <li><a href="#">Roupas</a></li>
+                </ul>
+
+            </menu>
+        </div>
         <!--AJustar search-->
-       
-        <div id="element-col" class="flex">
-            <img id="logo" src="../images/logos/pet_shop(120x350).png" alt="logo-pet-shop">
+
+        <div id="element-col">
+            <img id="logo" class="logo" src="../images/logos/pet_shop(120x350).png" alt="logo-pet-shop">
 
         </div>
 
-        <div id="container-search" class="flex">    
-                    
-        
-            <div id="lupa"><input type="text" name="search" id="search" autocomplete="off" placeholder="O que deseja buscar?">
+        <div id="container-search">
+            <div id="lupa">
+                <input type="text" name="search" id="search" class="search" autocomplete="off"
+                    placeholder="O que deseja buscar?">
                 <img src="../images/elements/lupa.png" alt="lupa">
-                <a href="#"><input type="submit" value=""></a>
+                <input type="submit" value="" id="submit" class="search">
+
             </div>
 
         </div>
 
-        
-        <script>
-            function activeMenu(){
-                const button = document.getElementById("btn-menu")
-                button.classList.toggle("active")
-
-                const main_menu = document.getElementsByClassName("main-menu")[0]
-                main_menu.style.display = (main_menu.style.display === "" || main_menu.style.display === "none") ? "block" : "none"
-
-            }
-
-        </script>
-
     </header>
-    
+
 </body>
+
 </html>
