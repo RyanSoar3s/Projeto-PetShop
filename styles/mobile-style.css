@@ -3,18 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 :root {    
-    /*Colors*/
+    /* Colors */
     --background: #c76a0e;
     --background-options: #6d36038a;   
     --menu-color: #964f08;
     --color3: #d99651;
 
-    /*Fonts*/
+    /* Fonts */
     --font-menu: 'Mukta', sans-serif;
 
 }
 
-/*Reset*/
+/* Reset */
 *{
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@
 
 }
 
-/*General Settings*/
+/* General Settings */
 html, body {
     height: 100vh;
     width: 100vw;
@@ -42,7 +42,7 @@ body {
 
 }
 
-/*Header*/
+/* Header */
 header {
     background-color: var(--background);
     height: 150px; 
@@ -131,7 +131,7 @@ li a {
 li:hover a{
     background-color: var(--background-options);
     transform: scale(1.01);
-    width: 97px;
+    width: 96px;
     padding-left: 10px;
 
 }
@@ -152,17 +152,18 @@ div#lupa {
 }
 
 input[type=text] {
-    display: none;
+    /*display: none;*/
     position: absolute;
-    height: 28px;
-    width: 56vw;
+    height: 0;
+    width: 0;
     top: -80px;
     left: -33vw;
     outline: none;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     padding-left: 10px;
-    margin: 10px 0px;
-
+    /*margin: 10px 0px;*/ 
+    transition: .5s ease;
+    
 }
 
 div#lupa img{
@@ -186,12 +187,22 @@ input[type=submit] {
     left: 23vw;
     margin: 10px 0px;
     cursor: pointer;
+    transition: width transform .5s ease;
 
 }
 
 .show-search {
-    display: block !important;
+   display: block !important;
 
+}
+
+#search.show-search {
+    height: 28px;
+    width: 56vw;
+    border: 1px solid black;
+    margin: 10px 0px;
+    border: 1px solid black; 
+    
 }
 
 #submit.show-search {
