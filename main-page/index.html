@@ -7,12 +7,12 @@
     <title>Pet Shop</title>
     <link rel="shortcut icon" href="../images/logos/icon-site.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/mobile-style.css" media="all">
+    <link rel="stylesheet" href="../styles/lanscape-style.css">
     <script src="../scripts/events.js" defer></script>
+    <script src="https://kit.fontawesome.com/e5894c27e0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!--lembrar de adicionar mais meta tags-->
-
     <header class="flex">
         <div>
             <button id="btn-menu">
@@ -21,14 +21,14 @@
                 <span class="menu-bar"></span>
 
             </button>
-            <!-- Fazer com que, quando o menu estiver ativo, seja possível sair dele clicando fora do menu -->
+
             <menu class="main-menu">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="#">Acessórios</a></li>
-                    <li><a href="#">Brinquedos</a></li>
-                    <li><a href="#">Camas</a></li>
-                    <li><a href="#">Roupas</a></li>
+                <ul class="list-menu">
+                    <li><a href="index.html" class="link-menu">Início</a></li>
+                    <li><a href="#" class="link-menu">Serviços</a></li>
+                    <li><a href="#" class="link-menu">Acessórios</a></li>
+                    <li><a href="#" class="link-menu">Brinquedos</a></li>
+                    <li><a href="#" class="link-menu">Roupas</a></li>
                 </ul>
 
             </menu>
@@ -41,8 +41,7 @@
 
         <div id="container-search">
             <div id="lupa">
-                <input type="text" name="search" class="search" autocomplete="off"
-                    placeholder="O que deseja buscar?">
+                <input type="text" name="search" id="search" class="search" autocomplete="off" placeholder="O que deseja buscar?">
                 <img src="../images/elements/lupa.png" alt="lupa">
                 <input type="submit" value="" id="submit" class="search">
 
@@ -51,6 +50,49 @@
         </div>
 
     </header>
+
+    <main class="flex">
+        <section id="services" class="flex">
+            <h1>Nossos Serviços</h1>
+
+            <h2>Equipe de veterinários especializados</h2>
+            <div>
+                <img class="img-services" src="../images/services/veterinary.jpg" alt="veterinário(a)">
+
+            </div>
+
+            <h2>Banho e tosa para o seu PET</h2>
+            <div>
+                <img class="img-services" src="../images/services/dog-bath.jpg" alt="banho-e-tosa">
+
+            </div>
+
+            <h2>Adquira nossa super ração natural</h2>
+            <div>
+                <img class="img-services" src="../images/services/cat-food.jpg" alt="ração">
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="flex">
+        <h3>Créditos:</h3>
+        <ul>
+            <li><a href="http://www.freepik.com" target="_blank">Designed by Freepik</a></li>
+        
+        </ul>
+
+        <h3>Rede Sociais</h3>
+        <ul id="contacts">
+            <li><i class="fa-brands fa-square-instagram fa-xl"></i><a href="#">Instagram</a></li>
+            <li><i class="fa-brands fa-linkedin fa-xl"></i><a href="#">Linkedin</a></li>
+            <li><i class="fa-solid fa-envelope fa-xl"></i><a href="#">Email</a></li>
+
+        </ul>
+
+    </footer>
 
 </body>
 

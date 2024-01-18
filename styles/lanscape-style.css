@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+
+@media screen and (min-width: 769px){
+    input[type=text] {
+        left: -36vw;
+
+    }
+
+    div#lupa img {
+        left: 33vw;
+
+    }
+    input[type=submit] {
+        left: 33vw;
+
+    }
+
+    #search.show-search {
+        width: 69vw;
+
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    input[type=text] {
+        left: -39vw;
+
+    }
+
+    div#lupa img {
+        left: 37vw;
+
+    }
+    input[type=submit] {
+        left: 37vw;
+
+    }
+
+    #search.show-search {
+        width: 76vw;
+
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    input[type=text] {
+        left: -41vw;
+
+    }
+
+    div#lupa img {
+        left: 40vw;
+
+    }
+    input[type=submit] {
+        left: 40vw;
+
+    }
+
+    #search.show-search {
+        width: 81vw;
+
+    }
+
+}

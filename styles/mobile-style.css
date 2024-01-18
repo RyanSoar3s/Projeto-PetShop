@@ -1,13 +1,16 @@
 @charset "UTF-8";
 
+
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
 
 :root {    
     /* Colors */
     --background: #c76a0e;
     --background-options: #6d36038a;   
     --menu-color: #964f08;
-    --color3: #d99651;
+    --background-services: #d3710ed3;
+    --footer: #aa5607;
 
     /* Fonts */
     --font-menu: 'Mukta', sans-serif;
@@ -113,14 +116,14 @@ menu.main-menu{
 
 }
 
-ul {
+ul.list-menu {
     list-style: none; 
     position: absolute;
     top: 60px;
     left: 15px;
 }
 
-li a {
+li a.link-menu {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -128,7 +131,7 @@ li a {
 
 }
 
-li:hover a{
+li:hover a.link-menu {
     background-color: var(--background-options);
     transform: scale(1.01);
     width: 96px;
@@ -137,12 +140,13 @@ li:hover a{
 }
 
 .logo-margin {
-    margin-top: 30px;
+    margin-top: 45px;
 
 }
 
 #container-search {
     justify-self: flex-end;
+    margin-top: 10px;
 
 }
 
@@ -152,17 +156,15 @@ div#lupa {
 }
 
 input[type=text] {
-    /*display: none;*/
     position: absolute;
     height: 0;
     width: 0;
     top: -80px;
     left: -33vw;
     outline: none;
-    /*border: 1px solid black;*/
     padding-left: 10px;
-    /*margin: 10px 0px;*/ 
     transition: .5s ease;
+    visibility: hidden;
     
 }
 
@@ -173,6 +175,7 @@ div#lupa img{
     top: -80px; 
     left: 23vw;
     margin: 10px 15px;
+    transition: .5s ease;
 
 }
 
@@ -187,16 +190,12 @@ input[type=submit] {
     left: 23vw;
     margin: 10px 0px;
     cursor: pointer;
-    transition: width transform .5s ease;
-
-}
-
-.show-search {
-   display: block !important;
+    transition: .5s ease;
 
 }
 
 #search.show-search {
+    visibility: visible;
     height: 28px;
     width: 56vw;
     border: 1px solid black;
@@ -207,5 +206,101 @@ input[type=submit] {
 
 #submit.show-search {
     border-radius: 0px 10px 10px 0px;
+
+}
+
+/* Main */
+
+main {
+    background-color: var(--background-services);
+    padding-bottom: 50px;
+
+}
+
+section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main > section > div, main > section > h1, main > section > h2 {
+    margin-top: 20px;
+
+}
+
+main > section > h1 {
+    font-size: 1.9em;
+
+}
+
+main > section > h2 {
+    font-size: 1.4em;
+
+}
+
+section img {
+    height: 350px;
+    width: 350px;
+    box-shadow: 2px 2px 4px 1px #00000059;
+    transition: .4s;
+
+}
+
+section .hover {
+    transform: scale(1.03);
+
+}
+
+footer {
+    background-color: var(--footer);
+    height: 300px;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: flex-start !important;
+
+}
+
+footer > h3 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    padding-top: 40px;
+    padding-left: 20px;
+
+}
+
+/* Footer */
+
+footer > ul {
+    padding-left: 20px;
+
+}
+
+footer > ul > li {
+    list-style: none;
+    padding-top: 5px;
+
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+
+}
+
+footer a:hover {
+    text-decoration: underline;
+
+}
+
+footer #contacts > li {
+    padding-top: 10px;
+
+}
+
+footer #contacts > li a {
+    padding-left: 10px;
 
 }
