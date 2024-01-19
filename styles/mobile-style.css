@@ -256,7 +256,7 @@ section .hover {
 
 footer {
     background-color: var(--footer);
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
     flex-direction: column;
     justify-content: flex-start !important;
